@@ -1,0 +1,671 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Report: Shaik Nagur Babu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --primary-light: #4895ef;
+            --secondary-color: #f72585;
+            --success-color: #4cc9f0;
+            --warning-color: #f9c74f;
+            --danger-color: #f94144;
+            --dark-color: #333333;
+            --darker-color: #222222;
+            --light-color: #ffffff;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --questions-bg: #ffffff;
+            --questions-text: #333333;
+            
+            --gradient-primary: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+            --gradient-secondary: linear-gradient(135deg, #f72585 0%, #7209b7 100%);
+            --gradient-dark: linear-gradient(125deg, #f8f9fa 0%, #ffffff 100%);
+            
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+            --shadow-md: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-lg: 0 3px 6px rgba(0,0,0,0.05);
+            
+            --border-radius-sm: 0;
+            --border-radius-md: 0;
+            --border-radius-lg: 0;
+            --border-radius-xl: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            color: var(--text-primary);
+            line-height: 1.4;
+            overflow-x: hidden;
+        }
+
+        .report-container {
+            max-width: 1000px;
+            margin: 1rem auto;
+            padding: 0;
+        }
+
+        .report-header {
+            background: #121212; /* Dark black background */
+            color: #ffffff; /* White text for better contrast */
+            padding: 2rem 2rem;
+            position: relative;
+            box-shadow: var(--shadow-sm);
+            z-index: 1;
+            border: 1px solid #000000;
+        }
+
+        .candidate-name {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 1rem;
+            color: #ffffff; /* White text for the candidate name */
+            position: relative;
+            display: inline-block;
+        }
+
+        .candidate-info-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 1rem;
+        }
+
+        .candidate-left-info, .candidate-right-info {
+            width: 48%;
+        }
+
+        .info-card {
+            background: #f9f9f9;
+            padding: 0.8rem;
+            margin-bottom: 0.5rem;
+            border: 1px solid #e0e0e0;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            align-items: center;
+        }
+
+        .report-content {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            position: relative;
+            z-index: 2;
+            border: 1px solid #e0e0e0;
+        }
+
+        .section {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background-color: #f9f9f9;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        .section::before {
+            display: none;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 0.8rem;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            background: rgba(67, 97, 238, 0.1);
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.8rem;
+        }
+
+        .info-icon {
+            margin-right: 0.8rem;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            background: rgba(67, 97, 238, 0.1);
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .info-content {
+            flex-grow: 1;
+        }
+
+        .info-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 0.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-value {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .progress-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .progress-container {
+            margin-bottom: 0;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.4rem;
+        }
+
+        .progress-category {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .progress-score {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #ffffff;
+            background: var(--primary-color);
+            padding: 0.1rem 0.5rem;
+        }
+
+        .progress {
+            height: 6px;
+            background: #e9ecef;
+            overflow: hidden;
+            box-shadow: none;
+        }
+
+        .progress-bar {
+            transition: width 1s ease;
+        }
+
+        .progress-bar.strong-no {
+            background: #f94144;
+        }
+        .progress-bar.no {
+            background: #f8961e;
+        }
+        .progress-bar.yes {
+            background: #4361ee;
+        }
+        .progress-bar.strong-yes {
+            background: #4cc9f0;
+        }
+
+        .questions-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .questions-list li {
+            background: #ffffff;
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.5rem;
+            box-shadow: var(--shadow-sm);
+            border-left: none;
+            color: var(--text-primary);
+            font-weight: 400;
+            font-size: 0.9rem;
+        }
+
+        .interviewer-section {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .interviewer-card {
+            background: #f9f9f9;
+            padding: 1rem;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            align-items: flex-start;
+            border: none;
+        }
+
+        .interviewer-avatar {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            margin-right: 1rem;
+            border: none;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .interviewer-info {
+            flex-grow: 1;
+        }
+
+        .interviewer-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .interviewer-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .interviewer-role {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--primary-color);
+            padding: 0.2rem 0.5rem;
+            background: rgba(67, 97, 238, 0.1);
+        }
+
+        .interviewer-details {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .social-link {
+            width: 24px;
+            height: 24px;
+            background: rgba(67, 97, 238, 0.1);
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+
+        .recording-link {
+            display: inline-flex;
+            align-items: center;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            text-decoration: none;
+            font-weight: 500;
+            box-shadow: var(--shadow-sm);
+            border: none;
+            font-size: 0.8rem;
+        }
+
+        .recording-link i {
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 992px) {
+            .candidate-name {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.2rem;
+            }
+            
+            .progress-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .report-header {
+                padding: 1.5rem 1rem;
+            }
+            
+            .candidate-name {
+                font-size: 1.5rem;
+            }
+            
+            .candidate-info-container {
+                flex-direction: column;
+            }
+            
+            .candidate-left-info, .candidate-right-info {
+                width: 100%;
+            }
+            
+            .report-content {
+                padding: 1rem;
+            }
+            
+            .section {
+                padding: 1rem;
+            }
+            
+            .progress-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .interviewer-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .interviewer-avatar {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+            
+            .interviewer-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.3rem;
+            }
+            
+            .social-links {
+                justify-content: flex-start;
+                margin-top: 0.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .report-header {
+                padding: 1rem;
+            }
+            
+            .candidate-name {
+                font-size: 1.4rem;
+            }
+            
+            .section-title {
+                font-size: 1.1rem;
+            }
+            
+            .section-title i {
+                width: 30px;
+                height: 30px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="report-container">
+        <div class="report-header">
+            <h1 class="candidate-name">Shaik Nagur Babu</h1>
+            
+            <div class="candidate-info-container">
+                <div class="candidate-left-info">
+                    <div class="info-card" style="background: #1e1e1e; border-color: #333333;">
+                        <div class="info-icon" style="background: rgba(255, 255, 255, 0.1); color: #ffffff;">
+                            <i class="bi bi-person-circle"></i>
+                        </div>
+                        <div class="info-content">
+                            <div class="info-label" style="color: #aaaaaa;">Candidate Name</div>
+                            <div class="info-value" style="color: #ffffff;">Shaik Nagur Babu</div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card" style="background: #1e1e1e; border-color: #333333;">
+                        <div class="info-icon" style="background: rgba(255, 255, 255, 0.1); color: #ffffff;">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <div class="info-label" style="color: #aaaaaa;">Email</div>
+                            <div class="info-value" style="color: #ffffff;">nagurashaik1512@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="candidate-right-info">
+                    <div class="info-card" style="background: #1e1e1e; border-color: #333333;">
+                        <div class="info-icon" style="background: rgba(255, 255, 255, 0.1); color: #ffffff;">
+                            <i class="bi bi-calendar"></i>
+                        </div>
+                        <div class="info-content">
+                            <div class="info-label" style="color: #aaaaaa;">Interview Date</div>
+                            <div class="info-value" style="color: #ffffff;">April 7 2025</div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card" style="background: #1e1e1e; border-color: #333333;">
+                        <div class="info-icon" style="background: rgba(255, 255, 255, 0.1); color: #ffffff;">
+                            <i class="bi bi-camera-video"></i>
+                        </div>
+                        <div class="info-content">
+                            <a href="https://drive.google.com/file/d/1sD4SmnsVyA5_CHKK36InlV1y3NRrV_7J/view?usp=drivesdk" target="_blank" class="recording-link">
+                                <i class="bi bi-play-circle"></i>
+                                View Recording
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="report-content">
+            <div class="section">
+                <h2 class="section-title">
+                    <i class="bi bi-person-badge"></i>
+                    Interviewer Information
+                </h2>
+                <div class="interviewer-card">
+                    <img src="https://ui-avatars.com/api/?name=Murari+Phani Kumar&background=4361ee&color=fff&size=200" alt="Interviewer" class="interviewer-avatar">
+                    <div class="interviewer-info">
+                        <div class="interviewer-row">
+                            <div class="interviewer-name">Murari Phani Kumar</div>
+                            <div class="interviewer-role">Senior Software Engineer</div>
+                        </div>
+                        <div class="interviewer-row">
+                            <div class="interviewer-details">Experience: 6 Yrs | Company: Value Labs</div>
+                        </div>
+                        <div class="interviewer-row">
+                            <div class="interviewer-details">Specialized in: Full stack</div>
+                            
+                            <div class="social-links">
+                                <a href="https://www.linkedin.com/in/phanimurari/" target="_blank" class="social-link">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <i class="bi bi-chat-left-text"></i>
+                    Communication Skills
+                </h2>
+                <div class="progress-grid">
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <div class="progress-category">Self Introduction</div>
+                            <div class="progress-score">8/10</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar strong-yes" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <div class="progress-category">Project Explanation</div>
+                            <div class="progress-score">6/10</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar yes" style="width: 60%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <div class="progress-category">Communication Skills</div>
+                            <div class="progress-score">6/10</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar yes" style="width: 60%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <i class="bi bi-check-circle"></i>
+                    Programming Skills
+                </h2>
+                <!-- Java Skills -->
+                <div class="progress-grid">
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <div class="progress-category">Java Easy</div>
+                            <div class="progress-score">10/10</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar strong-yes" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <div class="progress-category">Java Medium</div>
+                            <div class="progress-score">10/10</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar strong-yes" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <div class="progress-category">Java Hard</div>
+                            <div class="progress-score">8/10</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar strong-yes" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- SQL Skills -->
+                <div class="progress-grid" style="margin-top: 2rem;">
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <div class="progress-category">SQL Easy</div>
+                            <div class="progress-score">8/10</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar strong-yes" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <div class="progress-category">SQL Medium</div>
+                            <div class="progress-score">8/10</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar strong-yes" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <div class="progress-category">SQL Hard</div>
+                            <div class="progress-score">8/10</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar strong-yes" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Theory Skills -->
+                <div class="progress-grid" style="margin-top: 2rem;">
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <div class="progress-category">Java Theory</div>
+                            <div class="progress-score">8/10</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar strong-yes" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-header">
+                            <div class="progress-category">SQLite Theory</div>
+                            <div class="progress-score">8/10</div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar strong-yes" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <!-- Empty third column to maintain grid alignment -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <i class="bi bi-patch-question"></i>
+                    Questions Asked
+                </h2>
+                <ul class="questions-list">
+                    <li>Could you please introduce yourself?</li><li>What are your primary skills?</li><li>Can you tell me about your project on DeepFake Cardioid Detection using machine learning?</li><li>What was your role during your internship at Switch Technologies?</li><li>What are your hobbies?</li><li>Was your internship experience a paid one?</li><li>Do you have fundamental knowledge in Python?</li><li>How did you contribute to the team project using Python?</li><li>Can we discuss your ECommerce web application project?</li><li>Is your ECommerce application a full stack or backend application?</li><li>Can you explain the MVC design pattern?</li><li>How did you implement authentication in your project?</li><li>What is the purpose of using bcrypt in your project?</li><li>Which database did you use in your project?</li><li>What is the use of Postman in testing API endpoints?</li><li>What is the command to run your Java application like Spring Boot?</li><li>How is basic authentication implemented in your project?</li><li>What are query parameters?</li><li>Can you write a recursive function in Java?</li><li>What is a factorial?</li><li>What is selection sort?</li><li>What is the difference between int and Integer in Java?</li><li>Can you explain the difference between stack memory and heap memory?</li><li>Which garbage collector manages stack or heap?</li><li>What is an abstract class and how is it different from an interface in Java?</li><li>What is a nested class in Java and how is it different from an inner class?</li><li>What is the use of the Scanner class?</li><li>How does null work in Java and how is it different from an empty string or zero?</li><li>What is SQL injection?</li><li>What is denormalization?</li><li>What is the difference between a Primary key and a Foreign key in relational databases?</li><li>What is the difference between a Primary key and a Unique key in SQL?</li><li>How do you perform join operations and what are the different joins you know?</li><li>What is GROUP BY in SQL?</li><li>What is ORDER BY in SQL?</li><li>How do you delete a record permanently from a database?</li><li>What is COMMIT in SQL?</li><li>Can you write a SQL query to group customers by their country and find the total number of orders per country?</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set initial width of progress bars to 0
+            const progressBars = document.querySelectorAll('.progress-bar');
+            progressBars.forEach(bar => {
+                const finalWidth = bar.style.width;
+                bar.style.width = '0';
+                
+                // Use setTimeout to trigger animation after a small delay
+                setTimeout(() => {
+                    bar.style.width = finalWidth;
+                }, 300);
+            });
+        });
+    </script>
+</body>
+</html>
+    
