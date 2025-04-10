@@ -633,15 +633,86 @@
     </div>
 </div>
 
-            <div class="section">
-                <h2 class="section-title">
-                    <i class="bi bi-patch-question"></i>
-                    Questions Asked
-                </h2>
-                <ul class="questions-list">
-                    <li>Can you share your screen and open any Java online editor?</li><li>Do you have any idea about the Fibonacci sequence?</li><li>Can you explain the Fibonacci sequence?</li><li>Write a function where the parameter is a single integer n, and print the nth number of the Fibonacci sequence.</li><li>What is the nth number in the Fibonacci sequence if n is 4?</li><li>Are you done?</li><li>Can you use another online compiler?</li><li>Why are you printing the screen? Think about what happens when you exit the loop.</li><li>Can you show the output for the input six?</li><li>What happens if the input is two? Have you handled the base case?</li><li>Given a string, write a function to print the frequency of each character.</li><li>Can you initialize the string directly?</li><li>What is JDBC?</li><li>Can you explain the difference between stack memory and heap memory in Java?</li><li>Do you have a famous class in Java?</li><li>Can you explain polymorphism in Java?</li><li>What is the primary difference between StringBuilder and StringBuffer?</li><li>Which one is thread safe, StringBuilder or StringBuffer?</li><li>Do you know what a linked list is?</li><li>How does a linked list store data?</li><li>What is a singleton class in Java?</li><li>Have you used singleton classes in your projects?</li><li>Can you explain the use cases for singleton classes?</li><li>Do you know what reflection is in Java?</li><li>Have you worked with SQL?</li><li>Can you explain the difference between a primary key and a foreign key?</li><li>What are the general uses of a foreign key?</li><li>Do you know the differences between inner join, left join, and right join?</li><li>Why do we use the GROUP BY clause in SQL?</li><li>What do you mean by aggregate functions? Can you give examples?</li><li>Do you know what normalization is in a database?</li><li>What is a HAVING clause and why do we use it?</li><li>Do you know what sorting is in databases?</li><li>Can you open an SQL editor and write two to three basic SQL queries?</li><li>Can you open the contents of the customers and categories tables and join them based on a parameter?</li>
-                </ul>
+
+<!-- AFTER: Updated Questions Asked Section with Categories -->
+<div class="section">
+    <h2 class="section-title">
+        <i class="bi bi-patch-question"></i>
+        Questions Asked
+    </h2>
+    
+    <div class="row">
+        <!-- Style for question category titles -->
+        <style>
+            .question-category-title {
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: var(--primary-color);
+                margin-bottom: 1rem;
+                padding-bottom: 0.5rem;
+                border-bottom: 1px solid #e0e0e0;
+                display: flex;
+                align-items: center;
+            }
+            
+            .question-category-title i {
+                margin-right: 0.5rem;
+            }
+            
+            .question-section {
+                margin-bottom: 2rem;
+            }
+            
+            .question-section:last-child {
+                margin-bottom: 0;
+            }
+        </style>
+        
+        <div class="row">
+            <div class="col-12">
+                
+                <!-- General Questions -->
+                <div class="question-section">
+                    <h4 class="question-category-title">
+                        <i class="bi bi-chat-square-text"></i> General
+                    </h4>
+                    <ul class="questions-list">
+                        <li>Can you share your screen and open any Java online editor?</li><li>Can you use another online compiler?</li><li>Why are you printing the screen? Think about what happens when you exit the loop.</li><li>Can you show the output for the input six?</li><li>What happens if the input is two? Have you handled the base case?</li><li>Can you initialize the string directly?</li><li>Can you open an SQL editor and write two to three basic SQL queries?</li><li>Can you open the contents of the customers and categories tables and join them based on a parameter?</li>
+                    </ul>
+                </div>
+                
+                
+                
+                <!-- Java Questions -->
+                <div class="question-section">
+                    <h4 class="question-category-title">
+                        <i class="bi bi-braces"></i> Java
+                    </h4>
+                    <ul class="questions-list">
+                        <li>Do you have any idea about the Fibonacci sequence?</li><li>Can you explain the Fibonacci sequence?</li><li>Write a function where the parameter is a single integer n, and print the nth number of the Fibonacci sequence.</li><li>What is the nth number in the Fibonacci sequence if n is 4?</li><li>Given a string, write a function to print the frequency of each character.</li><li>What is JDBC?</li><li>Can you explain the difference between stack memory and heap memory in Java?</li><li>Do you have a famous class in Java?</li><li>Can you explain polymorphism in Java?</li><li>What is the primary difference between StringBuilder and StringBuffer?</li><li>Which one is thread safe, StringBuilder or StringBuffer?</li><li>Do you know what a linked list is?</li><li>How does a linked list store data?</li><li>What is a singleton class in Java?</li><li>Have you used singleton classes in your projects?</li><li>Can you explain the use cases for singleton classes?</li><li>Do you know what reflection is in Java?</li>
+                    </ul>
+                </div>
+                
+                
+                
+                <!-- SQL Questions -->
+                <div class="question-section">
+                    <h4 class="question-category-title">
+                        <i class="bi bi-database"></i> SQL
+                    </h4>
+                    <ul class="questions-list">
+                        <li>Have you worked with SQL?</li><li>Can you explain the difference between a primary key and a foreign key?</li><li>What are the general uses of a foreign key?</li><li>Do you know the differences between inner join, left join, and right join?</li><li>Why do we use the GROUP BY clause in SQL?</li><li>What do you mean by aggregate functions? Can you give examples?</li><li>Do you know what normalization is in a database?</li><li>What is a HAVING clause and why do we use it?</li><li>Do you know what sorting is in databases?</li>
+                    </ul>
+                </div>
+                
+                
+                
+                
+                
             </div>
+        </div>
+    </div>
+</div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

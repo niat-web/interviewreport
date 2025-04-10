@@ -633,15 +633,96 @@
     </div>
 </div>
 
-            <div class="section">
-                <h2 class="section-title">
-                    <i class="bi bi-patch-question"></i>
-                    Questions Asked
-                </h2>
-                <ul class="questions-list">
-                    <li>What do you know about Spring Boot?</li><li>Have you worked with Autosys on Linux?</li><li>Can you elaborate on any one of your projects mentioned in your resume?</li><li>What is the SVM algorithm?</li><li>Can you explain the HR Management System project and the technologies used?</li><li>Can you write a factorial program in Java?</li><li>Are there any syntax mistakes in your code? Can you execute it in the editor?</li><li>Can you recreate the Braille names that we have online?</li><li>Can you write a program to count the frequency of each character in a string?</li><li>What is the time complexity of this fold side transform?</li><li>How can you solve the problem of case sensitivity in character frequency counting?</li><li>What is the difference between int and Integer in Java?</li><li>Can you explain the difference between stack memory and heap memory in Java?</li><li>What is the MVC design pattern and how do you implement it in Java?</li><li>What is an abstract class and how is it different from an interface in Java?</li><li>How do you use the Scanner class to read user input in Java?</li><li>What is the purpose of using the 'new' keyword in Java?</li><li>What is a nested class in Java and how does it differ from an inner class?</li><li>What is the difference between a null value and an empty string or zero in Java?</li><li>How do you implement an abstract class and when is it useful?</li><li>What is JVM and what role does it play in executing a Java program?</li><li>What is the difference between JVM and JDK?</li><li>What is the purpose of the 'final' keyword in Java?</li><li>What is method overloading and method overriding in Java?</li><li>What is inheritance in Java?</li><li>What is polymorphism in Java?</li><li>What is a try-catch block used for in Java?</li><li>What is a finally block in Java?</li><li>What is a list in Java?</li><li>How is memory and data allocated for a list in Java?</li><li>What happens when you add a new element to a full ArrayList in Java?</li><li>What is a weak reference in Java?</li><li>What is SQL?</li><li>What is the difference between a primary key and a foreign key in a relational database?</li><li>What is the difference between a primary key and a unique key in SQL?</li><li>Why would you perform a join operation in SQL?</li><li>What are the types of joins in SQL?</li><li>What is the purpose of the GROUP BY clause in SQL?</li><li>Can you explain the COUNT, SUM, and AVG aggregate functions in SQL?</li><li>Why is the ORDER BY clause important in SQL?</li><li>What is a subquery in SQL and how does it differ from a join?</li><li>What is a database and what are the different types of databases?</li><li>What is the BETWEEN operator in SQL and how is it used?</li><li>How do you delete a record permanently from a database table in SQL?</li><li>What are the ACID properties in database transactions?</li><li>Can you write a query to join two tables using a foreign key?</li>
-                </ul>
+
+<!-- AFTER: Updated Questions Asked Section with Categories -->
+<div class="section">
+    <h2 class="section-title">
+        <i class="bi bi-patch-question"></i>
+        Questions Asked
+    </h2>
+    
+    <div class="row">
+        <!-- Style for question category titles -->
+        <style>
+            .question-category-title {
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: var(--primary-color);
+                margin-bottom: 1rem;
+                padding-bottom: 0.5rem;
+                border-bottom: 1px solid #e0e0e0;
+                display: flex;
+                align-items: center;
+            }
+            
+            .question-category-title i {
+                margin-right: 0.5rem;
+            }
+            
+            .question-section {
+                margin-bottom: 2rem;
+            }
+            
+            .question-section:last-child {
+                margin-bottom: 0;
+            }
+        </style>
+        
+        <div class="row">
+            <div class="col-12">
+                
+                <!-- General Questions -->
+                <div class="question-section">
+                    <h4 class="question-category-title">
+                        <i class="bi bi-chat-square-text"></i> General
+                    </h4>
+                    <ul class="questions-list">
+                        <li>Can you elaborate on any one of your projects mentioned in your resume?</li><li>Can you write a program to count the frequency of each character in a string?</li><li>How can you solve the problem of case sensitivity in character frequency counting?</li><li>What is the time complexity of this fold side transform?</li><li>Can you recreate the Braille names that we have online?</li>
+                    </ul>
+                </div>
+                
+                
+                
+                <!-- Java Questions -->
+                <div class="question-section">
+                    <h4 class="question-category-title">
+                        <i class="bi bi-braces"></i> Java
+                    </h4>
+                    <ul class="questions-list">
+                        <li>What do you know about Spring Boot?</li><li>Can you write a factorial program in Java?</li><li>Are there any syntax mistakes in your code? Can you execute it in the editor?</li><li>What is the difference between int and Integer in Java?</li><li>Can you explain the difference between stack memory and heap memory in Java?</li><li>What is the MVC design pattern and how do you implement it in Java?</li><li>What is an abstract class and how is it different from an interface in Java?</li><li>How do you use the Scanner class to read user input in Java?</li><li>What is the purpose of using the 'new' keyword in Java?</li><li>What is a nested class in Java and how does it differ from an inner class?</li><li>What is the difference between a null value and an empty string or zero in Java?</li><li>How do you implement an abstract class and when is it useful?</li><li>What is JVM and what role does it play in executing a Java program?</li><li>What is the difference between JVM and JDK?</li><li>What is the purpose of the 'final' keyword in Java?</li><li>What is method overloading and method overriding in Java?</li><li>What is inheritance in Java?</li><li>What is polymorphism in Java?</li><li>What is a try-catch block used for in Java?</li><li>What is a finally block in Java?</li><li>What is a list in Java?</li><li>How is memory and data allocated for a list in Java?</li><li>What happens when you add a new element to a full ArrayList in Java?</li><li>What is a weak reference in Java?</li>
+                    </ul>
+                </div>
+                
+                
+                
+                <!-- SQL Questions -->
+                <div class="question-section">
+                    <h4 class="question-category-title">
+                        <i class="bi bi-database"></i> SQL
+                    </h4>
+                    <ul class="questions-list">
+                        <li>What is SQL?</li><li>What is the difference between a primary key and a foreign key in a relational database?</li><li>What is the difference between a primary key and a unique key in SQL?</li><li>Why would you perform a join operation in SQL?</li><li>What are the types of joins in SQL?</li><li>What is the purpose of the GROUP BY clause in SQL?</li><li>Can you explain the COUNT, SUM, and AVG aggregate functions in SQL?</li><li>Why is the ORDER BY clause important in SQL?</li><li>What is a subquery in SQL and how does it differ from a join?</li><li>What is a database and what are the different types of databases?</li><li>What is the BETWEEN operator in SQL and how is it used?</li><li>How do you delete a record permanently from a database table in SQL?</li><li>What are the ACID properties in database transactions?</li><li>Can you write a query to join two tables using a foreign key?</li>
+                    </ul>
+                </div>
+                
+                
+                
+                <!-- Other Questions -->
+                <div class="question-section">
+                    <h4 class="question-category-title">
+                        <i class="bi bi-grid"></i> Other
+                    </h4>
+                    <ul class="questions-list">
+                        <li>Have you worked with Autosys on Linux?</li><li>What is the SVM algorithm?</li><li>Can you explain the HR Management System project and the technologies used?</li>
+                    </ul>
+                </div>
+                
+                
+                
             </div>
+        </div>
+    </div>
+</div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
